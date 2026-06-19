@@ -12,6 +12,13 @@ function solve() {
 
   for (let i = 0; i < n; i++) {
     let statement = input[ptr++];
+
+    // check if statement has +,-
+    if (statement.includes("+")) {
+      x++;
+    } else {
+      x--;
+    }
   }
 
   console.log(x);
