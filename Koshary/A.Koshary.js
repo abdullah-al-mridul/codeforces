@@ -6,7 +6,7 @@ function solve() {
   const input = fs.readFileSync(source, "utf-8").trim().split(/\s+/);
   if (input.length === 0 || input[0] === "") return;
 
-  console.log("Input :", input);
+  //   console.log("Input :", input);
 
   let t = parseInt(input[0], 10);
   let ptr = 1;
@@ -15,7 +15,7 @@ function solve() {
   for (let i = 0; i < t; i++) {
     let x = parseInt(input[ptr++], 10);
     let y = parseInt(input[ptr++], 10);
-    console.log(x, y);
+    // console.log(x, y);
 
     if (x % 2 === 0 || y % 2 === 0) {
       // one of the cordinate is even here
