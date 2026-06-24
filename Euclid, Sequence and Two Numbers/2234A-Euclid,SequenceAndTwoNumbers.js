@@ -8,22 +8,25 @@ function solve(n, b) {
     return;
   }
   function modularity(arr) {
-    let verify = new Set();
+    let verify = [];
     for (let idx = 0; idx < arr.length; idx++) {
       if (idx < arr.length - 2) {
         if (arr[idx] % arr[idx + 1] === arr[idx + 2]) {
-          verify.add(arr[idx]);
-          verify.add(arr[idx + 1]);
-          verify.add(arr[idx + 2]);
+          verify.push(arr[idx]);
+          if (idx === arr.length - 3) {
+            verify.push(arr[idx + 1]);
+            verify.push(arr[idx + 2]);
+          }
         }
       }
     }
-    if (verify.size === arr.length) {
+    if (verify.length === arr.length) {
       return true;
     } else {
       return false;
     }
   }
+
   if (arr.length <= 2) {
     console.log([arr[0], arr[1]].join(" "));
     return;
