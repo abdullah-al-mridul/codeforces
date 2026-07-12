@@ -1,7 +1,7 @@
 const fs = require("fs");
 
 function solve() {
-  const source = fs.existsSync("input.txt") ? "input2.txt" : 0;
+  const source = fs.existsSync("input.txt") ? "input.txt" : 0;
   const input = fs.readFileSync(source, "utf-8");
   let pos = 0;
 
